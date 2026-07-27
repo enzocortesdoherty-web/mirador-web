@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirador Club | Donde el deporte se eleva</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .footer-socials a:hover { color: var(--musgo) !important; opacity: 1 !important; }
+    </style>
+</head>
+<body>
+
+<!-- Navegación Flotante Estilo Píldora -->
+    <nav id="navbar" class="floating-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="assets/logo-mirador.-.png" alt="Mirador Club Logo"></a>
+            </div>
+            
+            <!-- Botón Hamburguesa (Nuevo) -->
+            <button class="hamburger" id="hamburger-menu" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-links" id="nav-links-menu">
+                <li><a href="#el-proyecto">Proyecto</a></li>
+                <li><a href="#timeline">Fases</a></li>
+                <li><a href="#fase-uno">Espacios</a></li>
+                <li><a href="#contacto" class="btn-nav">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Boxed -->
+    <header class="hero-boxed" id="home">
+        <div class="hero-inner reveal">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Donde el<br>deporte se eleva.</h1>
+                    <p>Una nueva forma de vivir el deporte, el bienestar y la comunidad.</p>
+                    <a href="#el-proyecto" class="btn btn-pill-white mt-2">Explorar proyecto <span class="arrow">↗</span></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- El Proyecto (Bento Grid) -->
+    <section id="el-proyecto" class="section-light bento-section">
+        <div class="container reveal">
+            <div class="section-header">
+                <span class="eyebrow">Visión Arquitectónica</span>
+                <h2>El Proyecto</h2>
+                <p>Un diseño pensado para crecer por etapas, integrando el entorno natural con instalaciones de primer nivel.</p>
+            </div>
+            
+            <div class="bento-grid-renders">
+                <div class="bento-item render-large">
+                    <img src="assets/banner-mirador-club-proyecto.png" alt="Render Principal Mirador">
+                    <div class="bento-overlay">
+                        <h4>Casa Club</h4>
+                        <p>El corazón de nuestra comunidad</p>
+                    </div>
+                </div>
+                <div class="bento-item render-small bg-obsidiana">
+                    <div class="bento-text-only">
+                        <h3>Más que un club.</h3>
+                        <p>Mirador Club es un proyecto deportivo diseñado para crecer por etapas, integrando deporte, comunidad, bienestar y convivencia en un entorno arquitectónico único.</p>
+                    </div>
+                </div>
+                <div class="bento-item render-small">
+                    <img src="assets/4.png" alt="Render Vista 2" style="filter: brightness(0.8);">
+                </div>
+                <div class="bento-item render-wide">
+                    <img src="assets/13.png" alt="Render Vista 3">
+                    <div class="bento-overlay">
+                        <h4>Integración Natural</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Atributos -->
+    <!--section id="intro" class="section-dark bento-features">
+        <div class="container reveal">
+            <div class="features-bento-grid">
+                <div class="feature-box">
+                    <div class="icon-wrap"><img src="assets/deporte-icon-mirador.png" alt="Deporte"></div>
+                    <div>
+                        <h4>Deporte</h4>
+                        <p>Espacios para entrenar, competir y disfrutar al máximo.</p>
+                    </div>
+                </div>
+                <div class="feature-box bg-musgo">
+                    <div class="icon-wrap"><img src="assets/comunidad-icon-mirador.png" alt="Comunidad"></div>
+                    <div>
+                        <h4 style="color: var(--obsidiana);">Comunidad</h4>
+                        <p style="color: var(--follaje);">Un lugar para conectar, compartir y crecer juntos.</p>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="icon-wrap"><img src="assets/wellness-icon-mirador.png" alt="Bienestar"></div>
+                    <div>
+                        <h4>Bienestar</h4>
+                        <p>Ambientes que promueven el equilibrio cuerpo y mente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section-->
+
+    <!-- Fases del Proyecto (Timeline) -->
+    <section id="timeline" class="section-light">
+        <div class="container reveal">
+            <div class="section-header text-center" style="margin: 0 auto 4rem;">
+                <span class="eyebrow">El Camino hacia Mirador Club</span>
+                <h2>Fases del Proyecto</h2>
+                <p>Un desarrollo pensado por etapas para construir mucho más que un club.</p>
+            </div>
+
+            <div class="modern-timeline">
+                <div class="timeline-card active">
+                    <div class="card-header">
+                        <span class="tag active-tag">01 · ACTIVA</span>
+                        <img src="assets/punto-de-juego-icon.png" class="icon-timeline" alt="Punto de Juego">
+                    </div>
+                    <h4>El Punto de Juego</h4>
+                    <p>La primera etapa para poner en movimiento al club está en construcción. Pádel, fútbol funcional y las primeras experiencias.</p>
+                </div>
+                
+                <div class="timeline-card">
+                    <div class="card-header">
+                        <span class="tag">02 · PRÓXIMAMENTE</span>
+                        <img src="assets/expansion-icon.png" class="icon-timeline" alt="Expansión">
+                    </div>
+                    <h4>La Expansión</h4>
+                    <p>Ampliamos la oferta deportiva incorporando vestidores de primer nivel, canchas de tenis y áreas de pickleball.</p>
+                </div>
+
+                <div class="timeline-card">
+                    <div class="card-header">
+                        <span class="tag">03 · PRÓXIMAMENTE</span>
+                        <img src="assets/social-icon.png" class="icon-timeline" alt="Social">
+                    </div>
+                    <h4>Mirador Social</h4>
+                    <p>El club toma forma como punto de reunión con la apertura del restaurante, terrazas y espacios de convivencia.</p>
+                </div>
+                
+                <div class="timeline-card">
+                    <div class="card-header">
+                        <span class="tag">04 · VISIÓN FINAL</span>
+                        <img src="assets/mirador-icon.png" class="icon-timeline" alt="Visión Final">
+                    </div>
+                    <h4>Mirador Club</h4>
+                    <p>La visión completa: deporte, bienestar y estilo de vida integrados en un proyecto consolidado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fase Uno -->
+    <section id="fase-uno" class="section-dark spaces-section">
+        <div class="container reveal">
+            <div class="section-header split-header">
+                <div>
+                    <span class="eyebrow text-musgo">Fase Activa</span>
+                    <h2>El Punto de Juego</h2>
+                </div>
+                <p class="header-desc">La primera experiencia deportiva de Mirador Club ya está activa. Espacios diseñados para rendir, disfrutar y conectar.</p>
+            </div>
+
+            <div class="bento-spaces-grid">
+                <div class="space-card">
+                    <div class="space-img">
+                        <span class="pill-badge">ALTO RENDIMIENTO</span>
+                        <img src="assets/padel-foto.png" alt="Canchas de Pádel">
+                    </div>
+                    <div class="space-content">
+                        <h3>Canchas de Pádel</h3>
+                        <p>Superficie de calidad internacional con iluminación profesional para juegos diurnos y nocturnos.</p>
+                        <ul class="modern-list">
+                            <li>Excelente adherencia y rebote</li>
+                            <li>Cristal templado panorámico</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="space-card">
+                    <div class="space-img">
+                        <span class="pill-badge">DINÁMICA Y EQUIPO</span>
+                        <img src="assets/futbol-foto.png" alt="Fútbol Funcional">
+                    </div>
+                    <div class="space-content">
+                        <h3>Fútbol Funcional</h3>
+                        <p>Un espacio activo diseñado para entrenamientos efectivos y juegos en equipo.</p>
+                        <ul class="modern-list">
+                            <li>Pastos sintéticos premium</li>
+                            <li>Iluminación nocturna</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lo que viene -->
+    <section class="section-light upcoming-modern">
+        <div class="container reveal">
+            <h3 class="mb-4">Próximas Instalaciones</h3>
+            <div class="upcoming-grid">
+                <div class="upcoming-item">
+                    <img src="assets/vestidores-mirador.png" alt="Vestidores">
+                    <div class="upcoming-label">Vestidores</div>
+                </div>
+                <div class="upcoming-item">
+                    <img src="assets/tenis-mirador.png" alt="Tenis">
+                    <div class="upcoming-label">Tenis</div>
+                </div>
+                <div class="upcoming-item">
+                    <img src="assets/pickleball-mirador.png" alt="Pickleball">
+                    <div class="upcoming-label">Pickleball</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Blog Moderno -->
+    <section id="blog" class="section-light" style="padding-top: 0;">
+        <div class="container reveal">
+            <div class="section-header">
+                <span class="eyebrow">Comunidad y Noticias</span>
+                <h2>Historias desde Mirador</h2>
+            </div>
+            
+            <div class="modern-blog-grid">
+                <article class="blog-card-modern">
+                    <div class="blog-img-wrap">
+                        <span class="blog-pill">Visión</span>
+                        <img src="assets/mirador-video-wrap.png" alt="Obra">
+                    </div>
+                    <div class="blog-content-modern">
+                        <h4>El Mirador: el proyecto que redefine la forma de vivir el deporte</h4>
+                        <a href="articulo-proyecto.html" class="btn-link-modern">Leer nota <span class="arrow">→</span></a>
+                    </div>
+                </article>
+                
+                <article class="blog-card-modern">
+                    <div class="blog-img-wrap">
+                        <span class="blog-pill">Deporte</span>
+                        <img src="assets/mirador-articulo-padel.png" alt="Comunidad">
+                    </div>
+                    <div class="blog-content-modern">
+                        <h4>Canchas de pádel en El Mirador: tecnología, diseño y rendimiento</h4>
+                        <a href="articulo-padel.html" class="btn-link-modern">Leer nota <span class="arrow">→</span></a>
+                    </div>
+                </article>
+                
+                <article class="blog-card-modern">
+                    <div class="blog-img-wrap">
+                        <span class="blog-pill">Deporte</span>
+                        <img src="assets/mirador-articulo-tenis.png" alt="Estilo de vida">
+                    </div>
+                    <div class="blog-content-modern">
+                        <h4>Tenis en El Mirador: nuevas canchas para elevar el juego</h4>
+                        <a href="articulo-tenis.html" class="btn-link-modern">Leer nota <span class="arrow">→</span></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto con Formulario PHP -->
+    <section id="contacto" class="section-dark">
+        <div class="container reveal">
+            <div class="contact-bento">
+                <div class="contact-info">
+                    <h2>Sé parte del<br>Proyecto.</h2>
+                    <p>Déjanos tus datos para recibir información sobre reservas, próximas fases, eventos y nuevas aperturas.</p>
+                    <div class="contact-details mt-4">
+                        <p>📍 Carretera Huixquilucan-Río Hondo km 14<br>Estado de México, C.P. 52796</p>
+                        <p class="mt-2">📱 WhatsApp: +52 56 1234 5678</p>
+                    </div>
+                </div>
+                <div class="contact-form-wrap">
+                    <!-- ATENCIÓN: El formulario ahora apunta por AJAX, pero tiene los tags 'name' -->
+                    <form id="leadForm" class="modern-form">
+                        <input type="text" name="nombre" placeholder="Nombre completo" required>
+                        <input type="tel" name="telefono" placeholder="Teléfono" required>
+                        <input type="email" name="correo" placeholder="Correo electrónico" required>
+                        
+                        <p class="form-label mt-2">¿Qué te interesa?</p>
+                        <div class="checkbox-group-modern">
+                            <label class="custom-check">
+                                <input type="checkbox" name="intereses[]" value="Pádel">
+                                <span>Pádel</span>
+                            </label>
+                            <label class="custom-check">
+                                <input type="checkbox" name="intereses[]" value="Fútbol">
+                                <span>Fútbol</span>
+                            </label>
+                            <label class="custom-check">
+                                <input type="checkbox" name="intereses[]" value="Membresías">
+                                <span>Membresías</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn-pill-musgo mt-4">Enviar Información <span class="arrow">→</span></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer con Redes Sociales -->
+    <footer class="modern-footer">
+        <div class="footer-socials" style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 1.5rem;">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/miradorclub/" target="_blank" style="color: rgba(255,255,255,0.6); transition: all 0.3s;">
+                <svg width="26" height="26" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/miradorclubmx" target="_blank" style="color: rgba(255,255,255,0.6); transition: all 0.3s;">
+                <svg width="26" height="26" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg>
+            </a>
+        </div>
+        <p>© 2026 Mirador Club Deportivo. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

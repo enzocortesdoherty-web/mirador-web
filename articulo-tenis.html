@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenis en El Mirador: nuevas canchas para elevar el juego | Mirador Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .blog-hero { padding: 120px 5% 2rem; background-color: var(--niebla); }
+        .blog-hero-inner { position: relative; width: 100%; min-height: 60vh; border-radius: var(--radius-lg); overflow: hidden; display: flex; align-items: flex-end; padding: 4rem; }
+        .blog-hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; background: url('assets/mirador-articulo-tenis.png') center/cover; z-index: 1; transform: scale(1.02); transition: transform 10s ease-out; }
+        .blog-hero-inner:hover .blog-hero-bg { transform: scale(1); }
+        .blog-hero-inner::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(26,41,33,0.95) 0%, rgba(26,41,33,0.2) 100%); z-index: 2; }
+        .blog-hero-content { position: relative; z-index: 3; color: var(--white); max-width: 900px; }
+        .blog-hero-content h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.1; margin: 1rem 0; letter-spacing: -0.02em; }
+        .blog-meta { display: flex; gap: 1.5rem; color: rgba(255,255,255,0.8); font-size: 0.95rem; margin-top: 2rem; align-items: center; }
+        .blog-meta .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--musgo) url('assets/logo-mirador.-.png') center/cover; display: inline-block; }
+        .article-wrapper { max-width: 800px; margin: 4rem auto 8rem; padding: 0 5%; }
+        .article-content p { font-size: 1.15rem; line-height: 1.8; color: #444; margin-bottom: 2rem; }
+        .article-content .lead { font-size: 1.4rem; color: var(--obsidiana); font-weight: 500; line-height: 1.6; margin-bottom: 3rem; }
+        .article-content h2 { font-size: 2.2rem; margin: 4rem 0 1.5rem; color: var(--obsidiana); }
+        .article-content h3 { font-size: 1.6rem; margin: 3rem 0 1rem; color: var(--obsidiana); }
+        .bento-quote { background: var(--obsidiana-light); color: var(--white); padding: 3rem; border-radius: var(--radius-md); font-size: 1.4rem; font-style: italic; line-height: 1.6; margin: 4rem 0; position: relative; border-left: 8px solid var(--musgo); }
+        .bento-image { border-radius: var(--radius-lg); overflow: hidden; margin: 4rem 0; box-shadow: 0 20px 40px rgba(0,0,0,0.06); }
+        .bento-image img { width: 100%; height: auto; display: block; }
+        .bento-image-caption { padding: 1rem 1.5rem; background: var(--white); font-size: 0.9rem; color: #666; text-align: center; }
+        .share-section { display: flex; justify-content: space-between; align-items: center; padding: 2rem 0; border-top: 1px solid rgba(0,0,0,0.1); border-bottom: 1px solid rgba(0,0,0,0.1); margin: 4rem 0; }
+        .share-tags .tag { margin-right: 0.5rem; background: var(--white); border: 1px solid rgba(0,0,0,0.1); }
+        @media (max-width: 768px) { .blog-hero { padding: 100px 3% 1rem; } .blog-hero-inner { padding: 2rem; min-height: 50vh; } .bento-quote { padding: 2rem; font-size: 1.2rem; } .article-wrapper { margin: 3rem auto 5rem; } .share-section { flex-direction: column; gap: 1.5rem; align-items: flex-start; } }
+    </style>
+</head>
+<body>
+    <!-- Navegación Flotante Estilo Píldora -->
+    <nav id="navbar" class="floating-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="assets/logo-mirador.-.png" alt="Mirador Club Logo"></a>
+            </div>
+            
+            <!-- Botón Hamburguesa (Nuevo) -->
+            <button class="hamburger" id="hamburger-menu" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-links" id="nav-links-menu">
+                <li><a href="#el-proyecto">Proyecto</a></li>
+                <li><a href="#timeline">Fases</a></li>
+                <li><a href="#fase-uno">Espacios</a></li>
+                <li><a href="#contacto" class="btn-nav">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="blog-hero">
+        <div class="blog-hero-inner reveal">
+            <div class="blog-hero-bg"></div>
+            <div class="blog-hero-content">
+                <span class="eyebrow text-musgo">Deporte / Expansión</span>
+                <h1>Tenis en El Mirador: nuevas canchas para elevar el juego</h1>
+                <div class="blog-meta">
+                    <div style="display: flex; align-items: center; gap: 10px;"><span class="author-avatar"></span><span>Por <strong>Equipo Mirador</strong></span></div>
+                    <span>&bull;</span><span>27 de Julio, 2026</span><span>&bull;</span><span>3 min de lectura</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="article-wrapper reveal">
+        <article class="article-content">
+            <p class="lead">Anunciamos con muchísima emoción la llegada de nuestras increíbles canchas de tenis a Mirador Club. Un espacio vibrante diseñado para disfrutar del deporte blanco y llevar tus partidos a un nuevo nivel.</p>
+            
+            <p>Dentro de nuestra Fase de Expansión, teníamos claro que el tenis debía tener un lugar protagónico. Queríamos construir canchas padrísimas donde, sin importar si vas a pelotear un rato con tus amigos el fin de semana o a jugar un torneo competitivo, te sientas en un entorno de primer nivel.</p>
+
+            <h2>Espacios increíbles para jugar</h2>
+            <p>Nos hemos enfocado en crear una superficie de juego impecable. El diseño de estas canchas prioriza el buen rebote, la comodidad en los desplazamientos y un entorno visualmente muy atractivo que se fusiona con la arquitectura de todo el club. Jugar aquí no será solo hacer deporte, será toda una experiencia.</p>
+            
+            <div class="bento-image">
+                <img src="assets/tenis-mirador.png" alt="Canchas de Tenis en Mirador Club">
+                <div class="bento-image-caption">Espacios diseñados para disfrutar al máximo cada set.</div>
+            </div>
+
+            <blockquote class="bento-quote">
+                "Nuestras nuevas canchas de tenis están pensadas para inspirarte a jugar mejor, a retarte y, sobre todo, a disfrutar muchísimo el tiempo en la cancha."
+            </blockquote>
+
+            <h2>Mucho más que un partido</h2>
+            <p>Sabemos que la magia del tenis también está en lo que sucede fuera de las líneas. Estas nuevas instalaciones vendrán acompañadas de grandes mejoras en las áreas comunes del club, para que al terminar de jugar puedas relajarte y convivir con los demás socios.</p>
+            
+            <p>Prepárate para elevar tu juego. Las nuevas canchas de tenis en Mirador Club están casi listas para recibirte y convertirse en el escenario de tus mejores partidos.</p>
+
+            <div class="share-section">
+                <div class="share-tags"><span class="tag">Tenis</span><span class="tag">Deporte</span><span class="tag">Comunidad</span></div>
+                <div class="share-actions"><a href="#" class="btn-pill-white" style="border: 1px solid #ddd; padding: 0.8rem 1.5rem; font-size: 0.9rem; color: var(--obsidiana);">Compartir nota <span style="margin-left: 5px;">↗</span></a></div>
+            </div>
+        </article>
+    </main>
+
+    <section class="section-light" style="padding-top: 0;">
+        <div class="container reveal">
+            <h3 class="mb-4">Sigue leyendo</h3>
+            <div class="modern-blog-grid">
+                <article class="blog-card-modern">
+                    <div class="blog-img-wrap"><span class="blog-pill">Deporte</span><img src="assets/mirador-articulo-padel.png" alt="Pádel"></div>
+                    <div class="blog-content-modern"><h4>Canchas de pádel en El Mirador: tecnología, diseño y rendimiento</h4><a href="articulo-padel.html" class="btn-link-modern">Leer nota <span class="arrow">→</span></a></div>
+                </article>
+                <article class="blog-card-modern">
+                    <div class="blog-img-wrap"><span class="blog-pill">Visión</span><img src="assets/mirador-video-wrap.png" alt="Estilo de vida"></div>
+                    <div class="blog-content-modern"><h4>El Mirador: el proyecto que redefine la forma de vivir el deporte</h4><a href="articulo-proyecto.html" class="btn-link-modern">Leer nota <span class="arrow">→</span></a></div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <footer class="modern-footer"><p>© 2026 Mirador Club Deportivo. Todos los derechos reservados.</p></footer>
+</body>
+</html>
