@@ -1,4 +1,13 @@
+/* --- EFECTO SMOOTH SCROLL --- */
+html {
+    scroll-behavior: smooth;
+    /* Esto evita que el menú fijo tape los títulos al deslizarse: */
+    scroll-padding-top: 110px; 
+}
+
+
 /* --- Variables de Marca Modernizadas --- */
+
 :root {
     --obsidiana: #1a2921; /* Ligeramente más profundo */
     --obsidiana-light: #2a4034;

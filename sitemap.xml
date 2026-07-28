@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <!-- Página Principal -->
+   <url>
+      <loc>https://miradorclub.mx/</loc>
+      <lastmod>2026-07-27</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <!-- Artículo: El Proyecto -->
+   <url>
+      <loc>https://miradorclub.mx/articulo-proyecto.html</loc>
+      <lastmod>2026-07-27</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <!-- Artículo: Pádel -->
+   <url>
+      <loc>https://miradorclub.mx/articulo-padel.html</loc>
+      <lastmod>2026-07-27</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <!-- Artículo: Tenis -->
+   <url>
+      <loc>https://miradorclub.mx/articulo-tenis.html</loc>
+      <lastmod>2026-07-27</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <!-- Artículo: Fútbol Funcional -->
+   <url>
+      <loc>https://miradorclub.mx/articulo-futbol.html</loc>
+      <lastmod>2026-07-27</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+</urlset>
