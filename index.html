@@ -28,14 +28,19 @@
     <meta property="twitter:description" content="Descubre la nueva forma de vivir el deporte. Pádel, tenis, fútbol y más en un entorno natural y exclusivo.">
     <meta property="twitter:image" content="https://miradorclub.mx/assets/banner-mirador-club-proyecto.png">
 
-    <!-- Tipografías y Estilos (Asegúrate de tener la Freight Sans vinculada aquí según el paso anterior) -->
+    <!-- Tipografías y Estilos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Ya NO necesitamos DM Sans, así que la puedes borrar. Mantenemos el link por si tu CSS la necesita como fallback, pero la Freight Sans manda -->
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     
     <style>
         .footer-socials a:hover { color: var(--musgo) !important; opacity: 1 !important; }
+        /* FORZAR LA TIPOGRAFÍA EN TODO EL DOCUMENTO */
+        body, h1, h2, h3, h4, h5, h6, p, a, span, button, input, label, li {
+            font-family: 'Freight Sans Condensed W03', 'Freight Sans Condensed', sans-serif !important;
+        }
     </style>
 </head>
 <body>
@@ -56,16 +61,18 @@
             
             <ul class="nav-links" id="nav-links-menu">
                 <li><a href="#el-proyecto">Proyecto</a></li>
-                <li><a href="#timeline">Fases</a></li>
-                <li><a href="#fase-uno">Espacios</a></li>
+                <li><a href="#fase-activa">Espacios Activos</a></li>
+                 <li><a href="#timeline">Fases</a></li>
+                <li><a href="#blog">Noticias</a></li>
                 <li><a href="#contacto" class="btn-nav">Contacto</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Boxed -->
-    <header class="hero-boxed" id="home">
+    <header class="hero-boxed" id="home" style="padding-top: 140px;">
         <div class="hero-inner reveal">
+            <!-- La imagen aérea que cambiarás se controla desde el CSS (.hero-bg) -->
             <div class="hero-bg"></div>
             <div class="hero-content">
                 <div class="hero-text">
@@ -77,188 +84,394 @@
         </div>
     </header>
 
-    <!-- El Proyecto (Bento Grid) -->
-    <section id="el-proyecto" class="section-light bento-section">
+   <!-- 1. EL PROYECTO (Carruseles Temáticos Estilo Netflix) -->
+    <section id="el-proyecto" class="section-light">
         <div class="container reveal">
-            <div class="section-header">
-                <span class="eyebrow">Visión Arquitectónica</span>
-                <h2>El Proyecto</h2>
-                <p>Un diseño pensado para crecer por etapas, integrando el entorno natural con instalaciones de primer nivel.</p>
+            <!-- Introducción de Ventas -->
+            <div class="tour-intro-wrapper mb-4">
+                <span class="eyebrow">Tu nuevo estilo de vida</span>
+                <h2 style="margin-bottom: 1.5rem;">Descubre el ecosistema <br>que transformará tu forma de vivir el deporte.</h2>
+                <p class="tour-lead">Mirador Club será mucho más que un lugar para entrenar. Será un proyecto integral pensado para transformar la manera de vivir el deporte, el bienestar y el tiempo libre. Todo el confort, la exclusividad y las experiencias que imaginas, reunidos en un solo lugar. <br><br><strong>Conoce todo lo que próximamente integrará Mirador Club.</strong></p>
             </div>
             
-            <div class="bento-grid-renders">
-                <div class="bento-item render-large">
-                    <img src="assets/banner-mirador-club-proyecto.png" alt="Render Principal Mirador">
-                    <div class="bento-overlay">
-                        <h4>Casa Club</h4>
-                        <p>El corazón de nuestra comunidad</p>
+            <!-- CONTENEDOR DE CARRUSELES TEMÁTICOS -->
+            <div class="themed-carousels-wrapper">
+                
+                <!-- CATEGORÍA 1: DEPORTES Y RENDIMIENTO -->
+                <div class="theme-row">
+                    <!-- CONTENEDOR FLEX PARA EL ICONO Y EL TÍTULO -->
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 4px solid var(--musgo);">
+                        <img src="assets/deporte-icon.png" alt="Deportes y Rendimiento" style="width: 95px;">
+                        <h3 class="theme-row-title" style="margin-bottom: 0; padding-left: 0; border-left: none;">DEPORTE</h3>
+                    </div>
+                    
+                    <div class="theme-carousel">
+                        <!-- Pádel Interiores -->
+                        <div class="tour-item">
+                            <img src="assets/padel-mirador.png" alt="Canchas de Pádel Interiores">
+                            <div class="tour-overlay">
+                                
+                                <h3>12 Canchas de Pádel Interiores</h3>
+                                <p>Juega al más alto nivel en instalaciones techadas diseñadas para torneos y juego diario continuo.</p>
+                            </div>
+                        </div>
+                        <!-- Estadio Pádel -->
+                        <div class="tour-item">
+                            <img src="assets/estadio-mirador-padel.png" alt="Estadio de Pádel">
+                            <div class="tour-overlay">
+                                
+                                <h3>Estadio de Pádel</h3>
+                                <p>El escenario definitivo para las finales más emocionantes y juego al aire libre.</p>
+                            </div>
+                        </div>
+                        <!-- Tenis -->
+                        <div class="tour-item">
+                            <img src="assets/tenis-mirador 2.png" alt="Canchas de Tenis">
+                            <div class="tour-overlay">
+                               
+                                <h3>Canchas de Tenis</h3>
+                                <p>Superficies profesionales para desarrollar tu técnica en los deportes de mayor tradición y crecimiento.</p>
+                            </div>
+                        </div>
+                        <!-- Fútbol -->
+                        <div class="tour-item">
+                            <img src="assets/futbol-mirador.png" alt="Cancha de Fútbol">
+                            <div class="tour-overlay">
+                                
+                                <h3>Cancha de Fútbol</h3>
+                                <p>Acondicionamiento y táctica sobre pasto sintético premium.</p>
+                            </div>
+                        </div>
+                        <!-- Gimnasio (Se unió a esta fila) -->
+                        <div class="tour-item">
+                            <img src="assets/gimnasio-mirador.png" alt="Gimnasio">
+                            <div class="tour-overlay">
+                                
+                                <h3>Gimnasio</h3>
+                                <p>Equipamiento de vanguardia en un entorno pensado para alcanzar tu máximo potencial físico.</p>
+                            </div>
+                        </div>
+                        <!-- Alberca Interior (Se unió a esta fila) -->
+                        <div class="tour-item">
+                            <img src="assets/alberca-interior-mirador.png" alt="Alberca Interior">
+                            <div class="tour-overlay">
+                                
+                                <h3>Alberca Interior</h3>
+                                <p>Entrenamiento continuo sin importar el clima exterior.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="bento-item render-small bg-obsidiana">
-                    <div class="bento-text-only">
-                        <h3>Más que un club.</h3>
-                        <p>Mirador Club es un proyecto deportivo diseñado para crecer por etapas, integrando deporte, comunidad, bienestar y convivencia en un entorno arquitectónico único.</p>
+
+                <!-- CATEGORÍA 2: BIENESTAR Y RELAJACIÓN -->
+                <div class="theme-row">
+                     <!-- CONTENEDOR FLEX PARA EL ICONO Y EL TÍTULO -->
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 4px solid var(--musgo);">
+                        <img src="assets/bienestar-icon-2.png" alt="Bienestar y Relajación" style="width: 95px;">
+                        <h3 class="theme-row-title" style="margin-bottom: 0; padding-left: 0; border-left: none;">BIENESTAR</h3>
+                    </div>
+                    
+                    <div class="theme-carousel">
+                        <!-- Jacuzzi & Spa -->
+                        <div class="tour-item">
+                            <img src="assets/jacuzzi-mirador.png" alt="Spa y Jacuzzi">
+                            <div class="tour-overlay">
+                               
+                                <h3>Jacuzzi & Spa</h3>
+                                <p>Tu santuario de recuperación.</p>
+                            </div>
+                        </div>
+                        <!-- Alberca Exterior -->
+                        <div class="tour-item">
+                            <img src="assets/alberca-exterior-mirador.png" alt="Alberca Exterior" style="filter: brightness(0.85);">
+                            <div class="tour-overlay">
+                               
+                                <h3>Alberca Exterior</h3>
+                                <p>Un espacio al aire libre ideal para relajarse y disfrutar del entorno.</p>
+                            </div>
+                        </div>
+                        <!-- Salón de Belleza -->
+                        <div class="tour-item">
+                            <img src="assets/salon-belleza-mirador.png" alt="Salón de Belleza">
+                            <div class="tour-overlay">
+                               
+                                <h3>Salón de Belleza</h3>
+                                <p>Servicios estéticos de primer nivel.</p>
+                            </div>
+                        </div>
+                        <!-- Lockers -->
+                        <div class="tour-item">
+                            <img src="assets/vestidor-mirador.png" alt="Lockers Premium">
+                            <div class="tour-overlay">
+                               
+                                <h3>900+ Lockers Premium</h3>
+                                <p>Espacios amplios y diseño exclusivo.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="bento-item render-small">
-                    <img src="assets/4.png" alt="Render Vista 2" style="filter: brightness(0.8);">
-                </div>
-                <div class="bento-item render-wide">
-                    <img src="assets/13.png" alt="Render Vista 3">
-                    <div class="bento-overlay">
-                        <h4>Integración Natural</h4>
+
+                <!-- CATEGORÍA 3: ESTILO DE VIDA Y NEGOCIOS -->
+                <div class="theme-row">
+                    <!-- CONTENEDOR FLEX PARA EL ICONO Y EL TÍTULO -->
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 4px solid var(--musgo);">
+                        <img src="assets/cmunidad-icon.png" alt="Comunidad y Estilo de Vida " style="width: 95px;">
+                        <h3 class="theme-row-title" style="margin-bottom: 0; padding-left: 0; border-left: none;">COMUNIDAD Y ESTILO DE VIDA </h3>
+                    </div>
+                    
+                    <div class="theme-carousel">
+                        <!-- Casa Club -->
+                        <div class="tour-item">
+                            <img src="assets/banner-mirador-club-proyecto.png" alt="Casa Club">
+                            <div class="tour-overlay">
+                                
+                                <h3>Casa Club</h3>
+                                <p>El punto de encuentro por excelencia, diseñado para integrar la vida social, el confort y la comunidad.</p>
+                            </div>
+                        </div>
+                        <!-- Restaurante -->
+                        <div class="tour-item">
+                            <img src="assets/restaurante-mirador.png" alt="Restaurante" style="filter: brightness(0.85);">
+                            <div class="tour-overlay">
+                               
+                                <h3>Restaurante</h3>
+                                <p>Cocina de autor y socialización.</p>
+                            </div>
+                        </div>
+                        <!-- Coworking -->
+                        <div class="tour-item">
+                            <img src="assets/coworking-mirador.png" alt="Coworking">
+                            <div class="tour-overlay">
+                                
+                                <h3>Área de Coworking</h3>
+                                <p>Conecta, trabaja y cierra tratos sin salir del club.</p>
+                            </div>
+                        </div>
+                        <!-- Ludoteca -->
+                        <div class="tour-item">
+                            <img src="assets/ludoteca-mirador.png" alt="Ludoteca">
+                            <div class="tour-overlay">
+                                
+                                <h3>Ludoteca para Niños</h3>
+                                <p>Diversión segura y aprendizaje para los más pequeños.</p>
+                            </div>
+                        </div>
+                        <!-- Salón de Eventos -->
+                        <div class="tour-item">
+                            <img src="assets/salon-fiestas-mirador.png" alt="Salón de Eventos">
+                            <div class="tour-overlay">
+                                
+                                <h3>Salón de Eventos</h3>
+                                <p>El escenario perfecto para tus fechas importantes.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Atributos -->
-    <!--section id="intro" class="section-dark bento-features">
+    <!-- 2. FASE 1: LO QUE ESTÁ ACTIVO (Diseño Visual) -->
+    <section id="fase-activa" class="section-dark">
         <div class="container reveal">
-            <div class="features-bento-grid">
-                <div class="feature-box">
-                    <div class="icon-wrap"><img src="assets/deporte-icon-mirador.png" alt="Deporte"></div>
-                    <div>
-                        <h4>Deporte</h4>
-                        <p>Espacios para entrenar, competir y disfrutar al máximo.</p>
+            <!-- Título Principal de la Fase -->
+            <div class="active-phase-header text-center mb-4" style="margin-bottom: 5rem;">
+                <span class="eyebrow text-musgo" style="font-size: 1rem;">FASE 1: ACTIVA</span>
+                <h2 style="font-size: clamp(3rem, 6vw, 5rem); margin-top: 0.5rem;">El Punto de Juego</h2>
+                <p style="color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto; font-size: 1.1rem;">Nuestras primeras instalaciones ya están operando con la más alta tecnología y diseño deportivo.</p>
+            </div>
+
+            <!-- BLOQUE 1: Canchas de Pádel -->
+            <div class="sport-showcase-card mb-4">
+                <div class="sport-showcase-header">
+                    <h3>Canchas de Pádel</h3>
+                    <p>Diseñadas para el máximo rendimiento y el juego diario.</p>
+                </div>
+                
+                <!-- Galería Bento del Deporte -->
+                <div class="sport-bento-gallery">
+                    <div class="gallery-main">
+                        <img src="assets/padel-galeria-1-mirador.png" alt="Pádel Principal">
+                    </div>
+                    <div class="gallery-side">
+                        <img src="assets/padel-galeria-2-mirador.png" alt="Pádel Detalle 1">
+                        <img src="assets/padel-galeria-3-mirador.png" alt="Pádel Detalle 2">
                     </div>
                 </div>
-                <div class="feature-box bg-musgo">
-                    <div class="icon-wrap"><img src="assets/comunidad-icon-mirador.png" alt="Comunidad"></div>
-                    <div>
-                        <h4 style="color: var(--obsidiana);">Comunidad</h4>
-                        <p style="color: var(--follaje);">Un lugar para conectar, compartir y crecer juntos.</p>
+
+                <!-- Highlights Técnicos -->
+                <div class="sport-highlights">
+                    <div class="highlight-box">
+                        <!--span class="highlight-number">12</span-->
+                        <span class="highlight-text">12 Canchas<br>Interiores</span>
                     </div>
-                </div>
-                <div class="feature-box">
-                    <div class="icon-wrap"><img src="assets/wellness-icon-mirador.png" alt="Bienestar"></div>
-                    <div>
-                        <h4>Bienestar</h4>
-                        <p>Ambientes que promueven el equilibrio cuerpo y mente.</p>
+                    <div class="highlight-box">
+                        
+                        <span class="highlight-text">Cristal<br>Panorámico</span>
+                    </div>
+                    <div class="highlight-box">
+                        
+                        <span class="highlight-text">Iluminación<br>LED 360º</span>
+                    </div>
+                    <div class="highlight-box">
+                        
+                        <span class="highlight-text">Piso Sintético<br>Premium</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section-->
 
-    <!-- Fases del Proyecto (Timeline) -->
+            <!-- BLOQUE 2: Fútbol Funcional -->
+            <div class="sport-showcase-card">
+                <div class="sport-showcase-header">
+                    <h3>Fútbol Funcional</h3>
+                    <p>Dinámica, velocidad y acondicionamiento en equipo.</p>
+                </div>
+                
+                <!-- Galería Bento del Deporte -->
+                <div class="sport-bento-gallery reverse-gallery">
+                    <div class="gallery-side">
+                        <img src="assets/fut-galeria-1-mirador.png" alt="Fútbol Detalle 1">
+                        <img src="assets/fut-galeria-2-mirador.png" alt="Fútbol Detalle 2">
+                    </div>
+                    <div class="gallery-main">
+                        <img src="assets/fut-galeria-3-mirador.png" alt="Fútbol Principal">
+                    </div>
+                </div>
+
+                <!-- Highlights Técnicos -->
+                <div class="sport-highlights">
+                    <div class="highlight-box">
+                        
+                        <span class="highlight-text">Pasto Sintético<br>de 3ra Gen</span>
+                    </div>
+                    <div class="highlight-box">
+                        
+                        <span class="highlight-text">Sistema de<br>Amortiguación</span>
+                    </div>
+                    <div class="highlight-box">
+                        
+                        <span class="highlight-text">Ideal para<br>Entrenamientos</span>
+                    </div>
+                    <div class="highlight-box">
+                        
+                        <span class="highlight-text">Lista para<br>Juegos Nocturnos</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+<!-- 3. FASES DEL PROYECTO (3 Etapas con Carruseles e Iconos) -->
     <section id="timeline" class="section-light">
         <div class="container reveal">
             <div class="section-header text-center" style="margin: 0 auto 4rem;">
-                <span class="eyebrow">El Camino hacia Mirador Club</span>
+                <span class="eyebrow">El Camino hacia el futuro</span>
                 <h2>Fases del Proyecto</h2>
-                <p>Un desarrollo pensado por etapas para construir mucho más que un club.</p>
+                <p>Desliza para explorar lo que contempla cada etapa de nuestro desarrollo.</p>
             </div>
 
-            <div class="modern-timeline">
-                <div class="timeline-card active">
-                    <div class="card-header">
+            <div class="timeline-phases-wrapper">
+                
+                <!-- Etapa 1 -->
+                <div class="phase-block">
+                    <div class="phase-info">
                         <span class="tag active-tag">01 · ACTIVA</span>
-                        <img src="assets/punto-de-juego-icon.png" class="icon-timeline" alt="Punto de Juego">
+                        <!-- ICONO FASE 1 -->
+                        <img src="assets/fase-1-mirador.png" alt="Icono Fase 1" style="width: 85px; display: block; margin-top: 1.5rem; margin-bottom: 0.5rem;">
+                        <h4 style="margin-top: 0;">El Punto de Juego</h4>
+                        <p>Nuestras primeras instalaciones ya están operando.</p>
                     </div>
-                    <h4>El Punto de Juego</h4>
-                    <p>La primera etapa para poner en movimiento al club está en construcción. Pádel, fútbol funcional y las primeras experiencias.</p>
+                    <div class="phase-carousel">
+                        <div class="carousel-item">
+                            <img src="assets/padel-foto.png" alt="Pádel">
+                            <div class="carousel-caption">Pádel</div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/futbol-foto.png" alt="Fútbol">
+                            <div class="carousel-caption">Fútbol Funcional</div>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="timeline-card">
-                    <div class="card-header">
+
+                <!-- Etapa 2 -->
+                <div class="phase-block">
+                    <div class="phase-info">
                         <span class="tag">02 · PRÓXIMAMENTE</span>
-                        <img src="assets/expansion-icon.png" class="icon-timeline" alt="Expansión">
+                        <!-- ICONO FASE 2 -->
+                        <img src="assets/fase-2-mirador.png" alt="Icono Fase 2" style="width: 85px; display: block; margin-top: 1.5rem; margin-bottom: 0.5rem;">
+                        <h4 style="margin-top: 0;">La Expansión</h4>
+                        <p>Ampliamos la oferta deportiva y de comodidad.</p>
                     </div>
-                    <h4>La Expansión</h4>
-                    <p>Ampliamos la oferta deportiva incorporando vestidores de primer nivel, canchas de tenis y áreas de pickleball.</p>
+                    <div class="phase-carousel">
+                        <div class="carousel-item">
+                            <img src="assets/tenis-mirador 2.png" alt="Tenis">
+                            <div class="carousel-caption">Tenis</div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/pickleball-mirador.png" alt="Pickleball">
+                            <div class="carousel-caption">Pickleball</div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/vestidor-mirador.png" alt="Vestidores">
+                            <div class="carousel-caption">Vestidores Premium</div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="assets/restaurante-mirador.png" alt="Vestidores">
+                            <div class="carousel-caption">Restaurante</div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="timeline-card">
-                    <div class="card-header">
-                        <span class="tag">03 · PRÓXIMAMENTE</span>
-                        <img src="assets/social-icon.png" class="icon-timeline" alt="Social">
+                <!-- Etapa 3 -->
+                <div class="phase-block">
+                    <div class="phase-info">
+                        <span class="tag">03 · VISIÓN FINAL</span>
+                        <!-- ICONO FASE 3 -->
+                        <img src="assets/fase-3-mirador.png" alt="Icono Fase 3" style="width: 85px; display: block; margin-top: 1.5rem; margin-bottom: 0.5rem;">
+                        <h4 style="margin-top: 0;">Mirador Club</h4>
+                        <p>La integración total de bienestar, negocios y comunidad.</p>
                     </div>
-                    <h4>Mirador Social</h4>
-                    <p>El club toma forma como punto de reunión con la apertura del restaurante, terrazas y espacios de convivencia.</p>
-                </div>
-                
-                <div class="timeline-card">
-                    <div class="card-header">
-                        <span class="tag">04 · VISIÓN FINAL</span>
-                        <img src="assets/mirador-icon.png" class="icon-timeline" alt="Visión Final">
+                    <div class="phase-carousel">
+                        <div class="carousel-item">
+                            <img src="assets/banner.png" alt="Casa club">
+                            <div class="carousel-caption">Casa Club</div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/alberca-exterior-mirador.png" alt="Alberca exterior">
+                            <div class="carousel-caption">Alberca exterior</div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/alberca-interior-mirador.png" alt="alberca interior">
+                            <div class="carousel-caption">Alberca interior</div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="assets/coworking-mirador.png" alt="Coworking">
+                            <div class="carousel-caption">Coworking</div>
+                        </div>
+
+                         <div class="carousel-item">
+                            <img src="assets/ludoteca-mirador.png" alt="ludoteca">
+                            <div class="carousel-caption">Ludoteca</div>
+                        </div>
+
+                            <div class="carousel-item">
+                            <img src="assets/salon-fiestas-mirador.png" alt="ludoteca">
+                            <div class="carousel-caption">Salón de fiestas</div>
+                        </div>
+
                     </div>
-                    <h4>Mirador Club</h4>
-                    <p>La visión completa: deporte, bienestar y estilo de vida integrados en un proyecto consolidado.</p>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Fase Uno -->
-    <section id="fase-uno" class="section-dark spaces-section">
-        <div class="container reveal">
-            <div class="section-header split-header">
-                <div>
-                    <span class="eyebrow text-musgo">Fase Activa</span>
-                    <h2>El Punto de Juego</h2>
-                </div>
-                <p class="header-desc">La primera experiencia deportiva de Mirador Club ya está activa. Espacios diseñados para rendir, disfrutar y conectar.</p>
-            </div>
-
-            <div class="bento-spaces-grid">
-                <div class="space-card">
-                    <div class="space-img">
-                        <span class="pill-badge">ALTO RENDIMIENTO</span>
-                        <img src="assets/padel-foto.png" alt="Canchas de Pádel">
-                    </div>
-                    <div class="space-content">
-                        <h3>Canchas de Pádel</h3>
-                        <p>Superficie de calidad internacional con iluminación profesional para juegos diurnos y nocturnos.</p>
-                        <ul class="modern-list">
-                            <li>Excelente adherencia y rebote</li>
-                            <li>Cristal templado panorámico</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="space-card">
-                    <div class="space-img">
-                        <span class="pill-badge">DINÁMICA Y EQUIPO</span>
-                        <img src="assets/futbol-foto.png" alt="Fútbol Funcional">
-                    </div>
-                    <div class="space-content">
-                        <h3>Fútbol Funcional</h3>
-                        <p>Un espacio activo diseñado para entrenamientos efectivos y juegos en equipo.</p>
-                        <ul class="modern-list">
-                            <li>Pastos sintéticos premium</li>
-                            <li>Iluminación nocturna</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Lo que viene -->
-    <section class="section-light upcoming-modern">
-        <div class="container reveal">
-            <h3 class="mb-4">Próximas Instalaciones</h3>
-            <div class="upcoming-grid">
-                <div class="upcoming-item">
-                    <img src="assets/vestidores-mirador.png" alt="Vestidores">
-                    <div class="upcoming-label">Vestidores</div>
-                </div>
-                <div class="upcoming-item">
-                    <img src="assets/tenis-mirador.png" alt="Tenis">
-                    <div class="upcoming-label">Tenis</div>
-                </div>
-                <div class="upcoming-item">
-                    <img src="assets/pickleball-mirador.png" alt="Pickleball">
-                    <div class="upcoming-label">Pickleball</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
     <!-- Blog Moderno -->
-    <section id="blog" class="section-light" style="padding-top: 0;">
+    <section id="blog" class="section-light">
         <div class="container reveal">
             <div class="section-header">
                 <span class="eyebrow">Comunidad y Noticias</span>

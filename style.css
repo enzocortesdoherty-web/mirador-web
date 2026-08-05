@@ -237,7 +237,7 @@ a { text-decoration: none; color: inherit; }
 }
 .hero-bg {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    background: url(assets/banner.png) center/cover;
+    background: url(assets/mirador-area.png) center/cover;
     z-index: 1; transform: scale(1.05); transition: transform 10s ease-out;
 }
 .hero-inner:hover .hero-bg { transform: scale(1); }
@@ -526,4 +526,317 @@ a { text-decoration: none; color: inherit; }
 .reveal.active { 
     opacity: 1; 
     transform: translateY(0); 
+}
+
+
+
+/* =======================================================
+   ESTILOS NUEVOS: AMENIDADES, GALERÍAS Y CARRUSELES DE FASES
+   ======================================================= */
+
+/* --- 1. CARRUSELES TEMÁTICOS (El Proyecto) --- */
+.tour-intro-wrapper {
+    max-width: 900px;
+    margin: 0 auto 4rem;
+    text-align: center;
+}
+.tour-lead {
+    font-size: 1.2rem;
+    color: #444;
+    line-height: 1.7;
+}
+
+/* Estilos de las filas y títulos */
+.themed-carousels-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+.theme-row-title {
+    font-size: 1.8rem;
+    color: var(--obsidiana);
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    border-left: 4px solid var(--musgo);
+    line-height: 1.2;
+}
+
+/* El Contenedor del Carrusel (Scroll Horizontal) */
+.theme-carousel {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1.5rem;
+    /* Ocultar la barra de scroll para un look más limpio en navegadores webkit */
+    scrollbar-width: none; 
+}
+.theme-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Las Tarjetas Individuales (Tamaño fijo para que se deslicen) */
+.tour-item { 
+    flex: 0 0 350px; /* Ancho fijo de la tarjeta */
+    height: 420px; 
+    position: relative; 
+    border-radius: var(--radius-lg); 
+    overflow: hidden; 
+    background-color: var(--obsidiana);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    scroll-snap-align: start;
+}
+.tour-item img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); 
+}
+.tour-item:hover img { 
+    transform: scale(1.06); 
+}
+
+/* Capa oscura para que el texto sea siempre legible */
+.tour-overlay {
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    padding: 2.5rem 2rem;
+    background: linear-gradient(to top, rgba(26, 41, 33, 0.95) 0%, rgba(26, 41, 33, 0.4) 60%, transparent 100%);
+    color: var(--white);
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.tour-overlay h3 { 
+    font-size: 1.6rem; 
+    margin-bottom: 0.5rem; 
+    line-height: 1.15; 
+}
+.tour-overlay p { 
+    font-size: 0.95rem; 
+    color: rgba(255,255,255,0.8); 
+    margin-bottom: 0; 
+    line-height: 1.4;
+}
+
+/* Las "píldoras" dentro de las imágenes */
+.pill-badge-light {
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--white);
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius-pill);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tour-item { flex: 0 0 85%; /* En celular ocupan casi toda la pantalla */ height: 380px; }
+    .tour-overlay { padding: 1.5rem; }
+    .theme-row-title { font-size: 1.5rem; }
+    .tour-intro-wrapper { text-align: left; }
+}
+/* --- 2. Fase Activa (Deportes con Galería) --- */
+/* --- 2. FASE ACTIVA VISUAL (Galerías y Highlights) --- */
+.sport-showcase-card {
+    background: var(--obsidiana-light);
+    border-radius: var(--radius-lg);
+    padding: 4rem;
+    border: 1px solid rgba(255,255,255,0.05);
+    margin-bottom: 4rem;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+.sport-showcase-header {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.sport-showcase-header h3 {
+    font-size: 2.8rem;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+}
+.sport-showcase-header p {
+    color: var(--musgo);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Grillas de Fotos Estilo Bento */
+.sport-bento-gallery {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+.sport-bento-gallery.reverse-gallery {
+    grid-template-columns: 1fr 2fr;
+}
+.sport-bento-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    transition: transform 0.6s ease;
+}
+.gallery-main { 
+    height: 450px; 
+    border-radius: var(--radius-md); 
+    overflow: hidden; 
+}
+.gallery-main:hover img, .gallery-side img:hover { 
+    transform: scale(1.05); 
+}
+.gallery-side {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.5rem;
+}
+.gallery-side img {
+    height: 213px; /* Exactamente la mitad de la grande menos el gap */
+    border-radius: var(--radius-md);
+}
+
+/* Cajas de Especificaciones / Highlights */
+.sport-highlights {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+.highlight-box {
+    background: rgba(0,0,0,0.25);
+    padding: 2.5rem 1.5rem;
+    border-radius: var(--radius-md);
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.03);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-slow);
+}
+.highlight-box:hover {
+    background: rgba(255,255,255,0.05);
+    transform: translateY(-5px);
+    border-color: rgba(255,255,255,0.1);
+}
+.highlight-number, .highlight-icon {
+    font-size: 3rem;
+    color: var(--musgo);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+.highlight-text {
+    color: var(--white);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    line-height: 1.4;
+}
+
+/* Responsividad para móviles y tablets */
+@media (max-width: 1024px) {
+    .sport-bento-gallery, .sport-bento-gallery.reverse-gallery { grid-template-columns: 1fr; }
+    .gallery-main { height: 350px; }
+    .gallery-side { grid-template-columns: 1fr 1fr; grid-template-rows: auto; gap: 1rem; }
+    .gallery-side img { height: 200px; }
+    .sport-highlights { grid-template-columns: repeat(2, 1fr); }
+    .sport-showcase-card { padding: 3rem 2rem; }
+}
+@media (max-width: 768px) {
+    .sport-showcase-card { padding: 2rem 1.5rem; }
+    .gallery-main { height: 250px; }
+    .gallery-side { grid-template-columns: 1fr; }
+    .gallery-side img { height: 200px; }
+    .sport-highlights { grid-template-columns: 1fr; gap: 1rem; }
+    .highlight-box { padding: 2rem 1.5rem; }
+}
+
+/* --- 3. Línea de Tiempo con Carruseles --- */
+.timeline-phases-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+.phase-block {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    align-items: center;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+.phase-info {
+    padding-right: 2rem;
+    border-right: 1px solid rgba(0,0,0,0.1);
+}
+.phase-info p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* El Carrusel (Scroll Snap nativo súper fluido) */
+.phase-carousel {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: var(--musgo) transparent;
+}
+.phase-carousel::-webkit-scrollbar { height: 6px; }
+.phase-carousel::-webkit-scrollbar-thumb { background-color: var(--musgo); border-radius: 10px; }
+
+.carousel-item {
+    position: relative;
+    min-width: 280px;
+    height: 200px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+}
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carousel-caption {
+    position: absolute;
+    bottom: 0; left: 0; width: 100%;
+    padding: 1.5rem 1rem 1rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    color: var(--white);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+/* --- RESPONSIVE PARA ESTAS NUEVAS SECCIONES --- */
+@media (max-width: 1024px) {
+    .amenities-bento-grid { grid-template-columns: 1fr; }
+    .active-sport-bento, .active-sport-bento.reverse { grid-template-columns: 1fr; }
+    .active-sport-bento.reverse .sport-text { order: 1; }
+    .active-sport-bento.reverse .sport-gallery { order: 2; }
+    .phase-block { grid-template-columns: 1fr; }
+    .phase-info { border-right: none; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 1.5rem; padding-right: 0; }
+}
+@media (max-width: 768px) {
+    .sport-gallery { grid-template-columns: 1fr; }
+    .gallery-img { height: 220px; }
+    .carousel-item { min-width: 85%; }
 }
