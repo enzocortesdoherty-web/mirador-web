@@ -840,3 +840,36 @@ a { text-decoration: none; color: inherit; }
     .gallery-img { height: 220px; }
     .carousel-item { min-width: 85%; }
 }
+
+
+
+
+/* =========================================
+   CORRECCIÓN CARRUSEL DE FASES EN MÓVIL
+   ========================================= */
+@media (max-width: 768px) {
+    .phase-carousel {
+        gap: 0.8rem !important; /* Reduce el espacio entre imágenes */
+    }
+    
+    .carousel-item {
+        flex: 0 0 200px !important; /* Hace las tarjetas más angostas (200px) */
+        min-width: 200px !important; 
+        height: 140px !important; /* Reduce la altura para que no ocupen toda la pantalla */
+        border-radius: var(--radius-sm) !important;
+    }
+    
+    .carousel-caption {
+        font-size: 0.85rem !important; /* Texto un poco más pequeño y elegante */
+        padding: 1.5rem 0.8rem 0.8rem !important;
+    }
+    
+    /* Para que el icono y el título de la fase estén más compactos */
+    .phase-info img {
+        width: 35px !important;
+        margin-top: 1rem !important;
+    }
+    .phase-info h4 {
+        font-size: 1.3rem !important;
+    }
+}
