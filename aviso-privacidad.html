@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso de Privacidad | Mirador Club Deportivo</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <meta name="description" content="Aviso de Privacidad de Datos Personales para Aspirantes a Usuarios y Miembros de Mirador Club Deportivo (CUARENTA IGUALES, S.A.P.I. de C.V.).">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://miradorclub.mx/aviso-privacidad.html">
+
+    <!-- Tipografías y Estilos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body, h1, h2, h3, h4, h5, h6, p, a, span, button, input, label, li {
+            font-family: 'Freight Sans Condensed W03', 'Freight Sans Condensed', sans-serif !important;
+        }
+
+        /* Hero Editorial Legal */
+        .legal-hero {
+            padding: 130px 5% 3rem;
+            background-color: var(--niebla);
+        }
+        .legal-hero-inner {
+            position: relative;
+            width: 100%;
+            background-color: var(--obsidiana);
+            border-radius: var(--radius-lg);
+            padding: 4.5rem 3.5rem;
+            color: var(--white);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        .legal-hero-inner::after {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(189, 214, 70, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .legal-hero h1 {
+            font-size: clamp(2.4rem, 5vw, 4rem);
+            margin: 1rem 0;
+            line-height: 1.05;
+        }
+        .legal-hero p.subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 800px;
+            line-height: 1.6;
+        }
+
+        /* Contenedor del Documento Legal */
+        .legal-wrapper {
+            max-width: 960px;
+            margin: 3rem auto 7rem;
+            padding: 0 5%;
+        }
+        .legal-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 4rem;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.04);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .legal-intro {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--obsidiana);
+            font-weight: 500;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        /* Secciones Numeradas Bento-Style */
+        .legal-section {
+            margin-bottom: 2.5rem;
+        }
+        .legal-section h2 {
+            font-size: 1.5rem;
+            color: var(--obsidiana);
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+        }
+        .legal-section p {
+            font-size: 1.05rem;
+            line-height: 1.75;
+            color: #444;
+            margin-bottom: 1rem;
+        }
+        .legal-section ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 1rem 0 1.5rem;
+        }
+        .legal-section ul li {
+            position: relative;
+            padding-left: 1.8rem;
+            margin-bottom: 0.8rem;
+            color: #444;
+            line-height: 1.6;
+            font-size: 1.05rem;
+        }
+        .legal-section ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0.5rem;
+            color: var(--clorofila);
+            font-weight: bold;
+            font-size: 1.3rem;
+            line-height: 1;
+        }
+
+        /* Destacado de Contacto ARCO */
+        .arco-box {
+            background: var(--niebla);
+            border-left: 4px solid var(--musgo);
+            border-radius: var(--radius-sm);
+            padding: 1.8rem 2rem;
+            margin: 1.5rem 0;
+        }
+        .arco-box a {
+            color: var(--clorofila);
+            font-weight: 600;
+            text-decoration: underline;
+        }
+        .arco-box a:hover {
+            color: var(--obsidiana);
+        }
+
+        /* Caja de Consentimiento / Formato */
+        .consent-box {
+            background: #fafaf7;
+            border: 1px dashed rgba(0,0,0,0.25);
+            border-radius: var(--radius-md);
+            padding: 2.5rem;
+            margin-top: 3rem;
+        }
+        .consent-box h3 {
+            font-size: 1.35rem;
+            color: var(--obsidiana);
+            margin-bottom: 1.2rem;
+        }
+        .consent-check-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            color: #333;
+        }
+        .consent-check-item input[type="checkbox"] {
+            margin-top: 4px;
+            accent-color: var(--clorofila);
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .legal-hero { padding: 110px 4% 1.5rem; }
+            .legal-hero-inner { padding: 2.5rem 1.8rem; }
+            .legal-card { padding: 2.2rem 1.5rem; }
+            .legal-wrapper { margin: 2rem auto 5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegación Flotante Estilo Píldora -->
+    <nav id="navbar" class="floating-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="assets/logo-mirador.-.png" alt="Mirador Club Logo"></a>
+            </div>
+            
+            <!-- Botón Hamburguesa -->
+            <button class="hamburger" id="hamburger-menu" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-links" id="nav-links-menu">
+                <!--li><a href="index.html#el-proyecto">Proyecto</a></li>
+                <li><a href="index.html#fase-activa">Espacios Activos</a></li>
+                <li><a href="index.html#timeline">Fases</a></li>
+                <li><a href="index.html#blog">Noticias</a></li-->
+                <li><a href="index.html" class="btn-nav">Regresar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Encabezado de Sección -->
+    <header class="legal-hero">
+        <div class="container reveal">
+            <div class="legal-hero-inner">
+                <span class="eyebrow text-musgo">Marco Legal y Transparencia</span>
+                <h1>Aviso de Privacidad Integral</h1>
+                <p class="subtitle">Aviso de Privacidad de Datos Personales para Aspirantes a Usuarios, Socios y Visitantes de Mirador Club Deportivo.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cuerpo del Documento Legal -->
+    <main class="legal-wrapper reveal">
+        <article class="legal-card">
+            
+            <p class="legal-intro">
+                En cumplimiento de la <strong>Ley Federal de Protección de Datos Personales en Posesión de los Particulares</strong>, <strong>CUARENTA IGUALES, S.A.P.I. de C.V.</strong>, con nombre comercial <strong>Mirador Club Deportivo</strong>, pone a disposición de los aspirantes a usuarios el presente Aviso de Privacidad, mediante el cual informa el uso, tratamiento, resguardo, plazos, procedimientos y medios disponibles para limitar, revocar u oponerse al tratamiento de los datos personales proporcionados.
+            </p>
+
+            <section class="legal-section">
+                <h2>1. Responsable del tratamiento de datos personales</h2>
+                <p>
+                    <strong>CUARENTA IGUALES, S.A.P.I. de C.V.</strong>, con nombre comercial <strong>Mirador Club Deportivo</strong>, con domicilio en <em>Carretera Huixquilucan-Río Hondo Km. 14, Colonia San Nicolás Coatepec, C.P. 52796, Municipio de Huixquilucan, Estado de México</em>, es responsable de recabar, tratar, proteger y resguardar los datos personales de los aspirantes a usuarios, sus familiares, visitantes, candidatos, empleados, proveedores y prestadores de servicios, según corresponda.
+                </p>
+            </section>
+
+            <section class="legal-section">
+                <h2>2. Datos personales recabados y medios de obtención</h2>
+                <p>
+                    Los datos personales podrán obtenerse de forma directa, personal, electrónica o mediante terceros autorizados, incluyendo solicitudes de ingreso, página web, redes sociales, correo electrónico, registro mediante código QR, referencias de usuarios, oficinas administrativas y sistemas de videovigilancia. Los datos serán resguardados física y electrónicamente bajo estrictas medidas de seguridad administrativas, técnicas y físicas.
+                </p>
+                <p>
+                    Los datos de identificación, contacto, familiares, patrimoniales, fiscales y administrativos que podrán recabarse incluyen, de manera enunciativa:
+                </p>
+                <ul>
+                    <li>Nombre, fecha de nacimiento, comprobante de domicilio, teléfonos y correo electrónico.</li>
+                    <li>RFC, constancia de situación fiscal, domicilio fiscal y CURP.</li>
+                    <li>Actas de nacimiento, acta de matrimonio, fotografías, identificación oficial, pasaporte y documentación migratoria cuando aplique.</li>
+                    <li>Datos del cónyuge e hijos, así como referencias personales externas.</li>
+                    <li>Nacionalidad, lugar de trabajo, nombre de la empresa, cargo/puesto y placas de automóvil.</li>
+                </ul>
+                <p>
+                    Asimismo, podrán recabarse imágenes y sonidos captados por cámaras de seguridad, así como datos derivados del acceso, registro y permanencia dentro de las instalaciones del Club, exclusivamente para las finalidades descritas en el presente documento.
+                </p>
+            </section>
+
+            <section class="legal-section">
+                <h2>2.1. Datos de menores de edad y personas en estado de incapacidad</h2>
+                <p>
+                    El Club manifiesta especial interés en proteger la información personal de menores de edad, personas en estado de interdicción, personas con discapacidad o personas que requieran medidas especiales de protección. El tratamiento de dichos datos se realizará bajo medidas reforzadas de confidencialidad y seguridad, procurando en todo momento que sean proporcionados por padres, tutores o representantes legales acreditados.
+                </p>
+            </section>
+
+            <section class="legal-section">
+                <h2>3. Datos personales sensibles</h2>
+                <p>
+                    El Club podrá recabar datos personales sensibles relacionados con el estado de salud pasado o actual, principalmente a través de cuestionarios de salud, certificados médicos, formatos de seguridad, reportes de incidentes o evaluaciones necesarias para actividades deportivas, ingreso o prestación de servicios. 
+                </p>
+                <p>
+                    Dichos datos serán tratados únicamente cuando resulten necesarios para proteger la seguridad, salud e integridad de los usuarios y conforme a la legislación aplicable.
+                </p>
+            </section>
+
+            <section class="legal-section">
+                <h2>4. Finalidades primarias del tratamiento</h2>
+                <p>
+                    Los datos personales serán tratados para finalidades necesarias e indispensables:
+                </p>
+                <ul>
+                    <li><strong>Aspirantes y Usuarios:</strong> Tramitación de solicitud de ingreso, evaluación por el Comité de Admisión, identificación, integración de expediente, verificación de referencias, facturación, seguridad, control de acceso, videovigilancia, administración de membresías, prestación de servicios deportivos y recreativos, cumplimiento de obligaciones legales, fiscales, contractuales y reglamentarias, así como preservar la seguridad de las instalaciones y personas.</li>
+                    <li><strong>Candidatos o Empleados:</strong> Datos de identificación, patrimoniales, financieros, antecedentes laborales y académicos, procesos legales, datos de salud, características físicas y personales para procesos de selección, reclutamiento, bolsa de trabajo, capacitación, desarrollo, nómina, pago de prestaciones laborales y cumplimiento de obligaciones fiscales y normativas laborales.</li>
+                    <li><strong>Proveedores y Prestadores de Servicios:</strong> Datos de identificación, fiscales, bancarios, profesionales y de contacto para relaciones jurídicas, comerciales, contractuales, pago y facturación de servicios.</li>
+                    <li><strong>Visitantes:</strong> Datos de registro, control de acceso vehicular/peatonal y videograbación para salvaguardar la seguridad de las instalaciones y de la comunidad.</li>
+                </ul>
+            </section>
+
+            <section class="legal-section">
+                <h2>5. Finalidades secundarias</h2>
+                <p>
+                    De manera adicional, y siempre que el titular no manifieste su negativa, los datos personales podrán utilizarse para:
+                </p>
+                <ul>
+                    <li>Envío de flyers, boletines y material informativo del Club.</li>
+                    <li>Contacto de marketing y promociones vía llamadas telefónicas o mensajería instantánea.</li>
+                    <li>Información sobre nuevos servicios, productos, torneos, clínicas y eventos sociales.</li>
+                    <li>Campañas de difusión institucional y publicación de imágenes o material audiovisual en redes sociales y medios oficiales del Club.</li>
+                </ul>
+                <p>
+                    La negativa para el uso de datos personales con finalidades secundarias <strong>no será motivo</strong> para negar el servicio, membresía o trámite solicitado.
+                </p>
+            </section>
+
+            <section class="legal-section">
+                <h2>6. Transferencia de datos personales</h2>
+                <p>
+                    Los datos personales podrán transferirse a terceros con quienes exista una relación jurídica, comercial, administrativa, operativa o de negocios, cuando resulte necesario para proveer servicios contratados, cumplir obligaciones legales, fiscales o de seguridad, gestionar cobranza, administrar accesos inteligentes, emergencias médicas o soporte tecnológico.
+                </p>
+                <p>
+                    El titular podrá manifestar su negativa para transferencias que requieran consentimiento conforme a la ley, sin que ello afecte las excepciones estipuladas en el marco normativo aplicable.
+                </p>
+            </section>
+
+            <section class="legal-section">
+                <h2>7. Ejercicio de Derechos ARCO</h2>
+                <p>
+                    El titular o su representante legal debidamente acreditado podrá ejercer en cualquier momento sus derechos de <strong>Acceso, Rectificación, Cancelación y Oposición (ARCO)</strong> respecto de su información personal.
+                </p>
+                
+                <div class="arco-box">
+                    <p><strong>Mecanismo de atención:</strong> Enviar solicitud por escrito dirigida al Área de Protección de Datos Personales al correo electrónico: <a href="mailto:privacidad@miradorclub.mx">privacidad@miradorclub.mx</a> o entregarla físicamente en el domicilio del responsable.</p>
+                </div>
+
+                <p><strong>Requisitos de la solicitud:</strong></p>
+                <ul>
+                    <li>Nombre del titular y domicilio o medio digital para comunicarle la respuesta.</li>
+                    <li>Documentos que acrediten su identidad (INE, Pasaporte) o carta poder si actúa mediante apoderado.</li>
+                    <li>Descripción clara y precisa de los datos respecto de los cuales busca ejercer el derecho correspondiente.</li>
+                    <li>Cualquier otro elemento o documento que facilite la localización de sus datos.</li>
+                </ul>
+                <p>
+                    El Club comunicará la determinación adoptada en un plazo máximo de <strong>veinte (20) días hábiles</strong> posteriores a la recepción. En caso de resultar procedente, se hará efectiva dentro de los <strong>quince (15) días hábiles</strong> siguientes a la fecha de respuesta. Cuando exista una relación contractual vigente u obligación legal, la cancelación podrá estar sujeta a los términos previstos por la ley.
+                </p>
+            </section>
+
+            <section class="legal-section">
+                <h2>8. Revocación del consentimiento</h2>
+                <p>
+                    Usted podrá revocar en cualquier momento el consentimiento otorgado enviando su petición a <a href="mailto:privacidad@miradorclub.mx" style="color: var(--clorofila); font-weight: 600;">privacidad@miradorclub.mx</a> o en el domicilio del Club. Dicha revocación será evaluada y atendida dentro de un plazo de veinte (20) días hábiles, salvo que exista obligación legal o contractual que justifique la conservación y tratamiento de la información.
+                </p>
+            </section>
+
+            <section class="legal-section">
+                <h2>9. Limitación del uso o divulgación</h2>
+                <p>
+                    Para limitar el uso o divulgación de sus datos personales con fines mercadotécnicos o publicitarios, podrá solicitar su inscripción a las listas de exclusión internas del Club escribiendo a <a href="mailto:privacidad@miradorclub.mx" style="color: var(--clorofila); font-weight: 600;">privacidad@miradorclub.mx</a>.
+                </p>
+            </section>
+
+            <section class="legal-section">
+                <h2>10. Cookies, web beacons y tecnologías similares</h2>
+                <p>
+                    En nuestras plataformas digitales y sitio web se utilizan herramientas técnicas indispensables para garantizar la navegación y seguridad del usuario. En caso de implementar cookies o web beacons para propósitos analíticos o de personalización, el Club pondrá a disposición las herramientas correspondientes para su configuración o rechazo.
+                </p>
+            </section>
+
+            <section class="legal-section">
+                <h2>11. Cambios al Aviso de Privacidad</h2>
+                <p>
+                    El Club se reserva el derecho de modificar o actualizar el presente Aviso en respuesta a cambios legislativos o políticas internas. Cualquier modificación estará permanentemente disponible en nuestro sitio oficial <a href="https://miradorclub.mx/" style="color: var(--clorofila); font-weight: 600;">www.miradorclub.mx</a> y en los avisos colocados en nuestras instalaciones físicas.
+                </p>
+            </section>
+
+            <section class="legal-section">
+                <h2>12. Tratamiento indebido de datos personales</h2>
+                <p>
+                    Si usted considera que su derecho a la protección de datos personales ha sido vulnerado por alguna conducta u omisión de nuestra parte, podrá acudir ante el organismo garante nacional competente, de conformidad con las disposiciones de la Ley Federal de Protección de Datos Personales en Posesión de los Particulares.
+                </p>
+            </section>
+
+            <!-- Sección de Consentimiento -->
+            <!--div class="consent-box">
+                <h3>13. Manifestación del Consentimiento</h3>
+                <p style="color: #555; margin-bottom: 1.5rem;">
+                    El titular manifiesta que ha leído el presente Aviso de Privacidad y otorga su consentimiento para que sus datos personales de identificación, contacto, patrimoniales, fiscales, administrativos y, en su caso, sensibles, sean tratados conforme a lo estipulado en este documento.
+                </p>
+                <div class="consent-check-item">
+                    <input type="checkbox" id="negativa-secundarias">
+                    <label for="negativa-secundarias">No acepto que mis datos personales sean utilizados para finalidades secundarias (mercadotecnia, publicidad o eventos).</label>
+                </div>
+                <div class="consent-check-item">
+                    <input type="checkbox" id="negativa-transferencias">
+                    <label for="negativa-transferencias">No acepto que mis datos personales sean transferidos a terceros cuando mi consentimiento sea legalmente requerido.</label>
+                </div>
+            </div-->
+
+        </article>
+    </main>
+
+    <!-- Footer Corporativo -->
+    <footer class="modern-footer">
+        <div class="footer-socials" style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 1.5rem;">
+            <a href="https://www.instagram.com/miradorclub/" target="_blank" style="color: rgba(255,255,255,0.6); transition: all 0.3s;" aria-label="Instagram">
+                <svg width="26" height="26" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/miradorclubmx" target="_blank" style="color: rgba(255,255,255,0.6); transition: all 0.3s;" aria-label="Facebook">
+                <svg width="26" height="26" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg>
+            </a>
+        </div>
+        <p style="margin-bottom: 0.5rem;"><a href="aviso-privacidad.html" style="color: rgba(255,255,255,0.7); text-decoration: underline;">Aviso de Privacidad</a></p>
+        <p>© 2026 Mirador Club Deportivo. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
