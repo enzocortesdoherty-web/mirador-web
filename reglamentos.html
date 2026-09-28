@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Oficial de Reglamentos | Mirador Club Deportivo</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <meta name="description" content="Manual Oficial de Reglamentos de Mirador Club Deportivo. Normas, políticas y lineamientos para la convivencia y seguridad.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://miradorclub.mx/reglamentos.html">
+
+    <!-- Tipografías y Estilos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body, h1, h2, h3, h4, h5, h6, p, a, span, button, input, label, li {
+            font-family: 'Freight Sans Condensed W03', 'Freight Sans Condensed', sans-serif !important;
+        }
+
+        /* Hero Editorial Legal */
+        .legal-hero {
+            padding: 130px 5% 3rem;
+            background-color: var(--niebla);
+        }
+        .legal-hero-inner {
+            position: relative;
+            width: 100%;
+            background-color: var(--obsidiana);
+            border-radius: var(--radius-lg);
+            padding: 4.5rem 3.5rem;
+            color: var(--white);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        .legal-hero-inner::after {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(189, 214, 70, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .legal-hero h1 {
+            font-size: clamp(2.4rem, 5vw, 4rem);
+            margin: 1rem 0;
+            line-height: 1.05;
+        }
+        .legal-hero p.subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 800px;
+            line-height: 1.6;
+        }
+
+        /* Contenedor del Documento Legal */
+        .legal-wrapper {
+            max-width: 960px;
+            margin: 3rem auto 7rem;
+            padding: 0 5%;
+        }
+        .legal-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 4rem;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.04);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .legal-intro {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--obsidiana);
+            font-weight: 500;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        /* Secciones Numeradas Bento-Style */
+        .legal-section {
+            margin-bottom: 3.5rem;
+        }
+        .legal-section h2 {
+            font-size: 1.8rem;
+            color: var(--obsidiana);
+            margin-bottom: 1rem;
+            font-weight: 600;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--musgo);
+        }
+        .legal-section h3 {
+            font-size: 1.3rem;
+            color: var(--clorofila);
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+        .legal-section p {
+            font-size: 1.05rem;
+            line-height: 1.75;
+            color: #444;
+            margin-bottom: 1rem;
+        }
+        .legal-section strong {
+            color: var(--obsidiana);
+        }
+
+        @media (max-width: 768px) {
+            .legal-hero { padding: 110px 4% 1.5rem; }
+            .legal-hero-inner { padding: 2.5rem 1.8rem; }
+            .legal-card { padding: 2.2rem 1.5rem; }
+            .legal-wrapper { margin: 2rem auto 5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegación Flotante Estilo Píldora -->
+    <nav id="navbar" class="floating-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="assets/logo-mirador.-.png" alt="Mirador Club Logo"></a>
+            </div>
+            
+            <button class="hamburger" id="hamburger-menu" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-links" id="nav-links-menu">
+                <li><a href="index.html" class="btn-nav">Regresar al Inicio</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Encabezado de Sección -->
+    <header class="legal-hero">
+        <div class="container reveal">
+            <div class="legal-hero-inner">
+                <span class="eyebrow text-musgo">Normatividad Institucional</span>
+                <h1>Manual Oficial de Reglamentos</h1>
+                <p class="subtitle">Normas, políticas y lineamientos para la convivencia, seguridad y excelencia en el servicio dentro de Mirador Club Deportivo.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cuerpo del Documento Legal -->
+    <main class="legal-wrapper reveal">
+        <article class="legal-card">
+            
+            <p class="legal-intro">
+                El presente <strong>Manual Oficial de Reglamentos</strong> integra las disposiciones generales y específicas aplicables a Miembros, Adicionales, familiares, invitados, visitantes, profesionales, instructores, proveedores y personal autorizado dentro de Mirador Club Deportivo. Su finalidad es ordenar la convivencia, proteger la seguridad de los usuarios, preservar las instalaciones, fortalecer la operación del Club y establecer criterios claros para el uso de cada área.
+            </p>
+
+            <!-- TÍTULO I -->
+            <section class="legal-section">
+                <h2>TÍTULO I. DISPOSICIONES GENERALES</h2>
+                
+                <h3>Capítulo I. Generalidades</h3>
+                <p><strong>Artículo 1. Objeto del Reglamento.</strong> El presente Manual contiene las disposiciones de orden general, obligatorio y de aplicación interna que regulan la relación entre los Miembros y CUARENTA IGUALES, S.A.P.I. de C.V. (la “Operadora”), respecto de las instalaciones conocidas como Mirador Club Deportivo (el “Club”).</p>
+                
+                <p><strong>Artículo 2. Ubicación y naturaleza del Club.</strong> El Club se integra por construcciones, instalaciones, áreas deportivas, sociales, recreativas, equipos y servicios ubicados en Carretera Huixquilucan-Rio Hondo Km 14.250, Municipio de Huixquilucan, Estado de México, acceso por la gasolinera G500 y Colegio Wingate.</p>
+                
+                <p><strong>Artículo 3. Finalidad institucional.</strong> El Club tiene por objeto fomentar actividades deportivas, recreativas y sociales, promoviendo hábitos de salud integral, valores deportivos, convivencia familiar y participación en clases, entrenamientos, torneos, competencias internas y eventos autorizados por la Operadora.</p>
+                
+                <p><strong>Artículo 4. Aplicación equitativa.</strong> Todas las políticas del presente Manual se aplicarán de manera general, equitativa y sin discriminación a hombres, mujeres, personas de géneros diversos, menores, adultos mayores y cualquier persona que haga uso autorizado de las instalaciones.</p>
+                
+                <p><strong>Artículo 5. Administración del Club.</strong> La Operadora designará libremente a las personas encargadas de conducir la operación diaria, administración, vigilancia, supervisión de servicios y cumplimiento del presente Manual. La Administración será representante de la Operadora ante los Miembros.</p>
+                
+                <p><strong>Artículo 6. Facultad de modificación.</strong> La Operadora podrá modificar total o parcialmente este Manual cuando las necesidades de operación, seguridad, mantenimiento, convivencia o prestación de servicios lo requieran.</p>
+                
+                <p><strong>Artículo 7. Medios de difusión.</strong> Las modificaciones, circulares, avisos y disposiciones del Club podrán publicarse en recepción, tableros oficiales, correo electrónico, teléfono, aplicación móvil, medios digitales, redes autorizadas o en www.miradorclub.mx.</p>
+                
+                <p><strong>Artículo 8. Aceptación obligatoria.</strong> El uso de las instalaciones del Club implica la aceptación total del presente Manual, sus modificaciones, reglamentos específicos, políticas, avisos y disposiciones complementarias emitidas por la Operadora.</p>
+
+                <h3>Capítulo II. Definiciones</h3>
+                <p><strong>Artículo 9. Operadora.</strong> CUARENTA IGUALES, S.A.P.I. de C.V., entidad responsable de la administración y operación del Club.</p>
+                <p><strong>Artículo 10. Club.</strong> Mirador Club Deportivo y todas sus instalaciones, servicios, áreas deportivas, sociales y recreativas.</p>
+                <p><strong>Artículo 11. Miembro Titular.</strong> Persona física o moral aprobada por la Operadora que figura como titular de una Membresía.</p>
+                <p><strong>Artículo 12. Miembro Activo.</strong> Miembro que se encuentra al corriente en sus obligaciones económicas, administrativas y reglamentarias.</p>
+                <p><strong>Artículo 13. Miembro Inactivo.</strong> Miembro cuyos derechos se encuentran suspendidos por incumplimiento, adeudo o resolución de la Operadora.</p>
+                <p><strong>Artículo 14. Adicional.</strong> Persona autorizada por el Miembro Titular para recibir servicios del Club conforme al tipo de Membresía contratada.</p>
+                <p><strong>Artículo 15. Invitado.</strong> Persona no miembro que ingresa al Club por invitación y bajo responsabilidad del Miembro que la registra.</p>
+                <p><strong>Artículo 16. Visitante.</strong> Persona que ingresa por autorización especial de la Administración, sin que ello genere derecho permanente de uso.</p>
+                <p><strong>Artículo 17. Profesional o Instructor.</strong> Persona autorizada por la Operadora para impartir clases o dirigir actividades dentro del Club.</p>
+                <p><strong>Artículo 18. Cuotas.</strong> Aportaciones ordinarias, extraordinarias, de invitados, casilleros, servicios o cualquier otro concepto autorizado por la Operadora.</p>
+            </section>
+
+            <!-- TÍTULO II -->
+            <section class="legal-section">
+                <h2>TÍTULO II. MEMBRESÍAS, ADMISIÓN Y DERECHOS DE USO</h2>
+                
+                <h3>Capítulo III. Membresías</h3>
+                <p><strong>Artículo 19. Membresía.</strong> La Membresía es el derecho de uso de las instalaciones y servicios del Club conforme a las modalidades, cuotas, limitaciones y condiciones establecidas por la Operadora.</p>
+                <p><strong>Artículo 20. Derecho de admisión.</strong> La Operadora se reserva en todo momento el derecho de admisión, permanencia, suspensión o cancelación de una Membresía conforme al presente Manual.</p>
+                <p><strong>Artículo 21. Calidad de Miembro.</strong> La adquisición, transmisión, herencia, adjudicación o cualquier acto jurídico relacionado con un certificado o membresía no otorga por sí mismo la calidad de Miembro, la cual sólo se adquiere mediante aprobación de la Operadora y cumplimiento del procedimiento de admisión.</p>
+                <p><strong>Artículo 22. Tipos de Membresía.</strong> La Operadora podrá establecer, modificar o eliminar tipos de Membresía, así como definir sus alcances, usuarios adicionales, cuotas, beneficios, restricciones y vigencia.</p>
+                <p><strong>Artículo 23. Certificados de Membresía.</strong> Las personas admitidas como Miembros Titulares deberán adquirir, cuando corresponda, un Certificado de Membresía conforme a los precios, condiciones, numeración, vigencia y requisitos establecidos por la Operadora.</p>
+                <p><strong>Artículo 24. Número de certificados.</strong> El número total de Certificados de Membresía será determinado por la Operadora. En caso de mantenerse la emisión de 1,300 certificados, cada uno tendrá el número progresivo correspondiente y la vigencia autorizada por la Operadora.</p>
+                <p><strong>Artículo 25. Transmisión por fallecimiento.</strong> En caso de fallecimiento del Miembro Titular persona física, la Membresía podrá transmitirse a quien legalmente corresponda, sujeto al procedimiento de admisión, aprobación de la Operadora y cumplimiento de obligaciones pendientes.</p>
+                <p><strong>Artículo 26. Traspaso de Membresía.</strong> La transmisión o traspaso de Membresía se sujetará al contrato de membresía, políticas vigentes y autorización expresa de la Operadora.</p>
+
+                <h3>Capítulo IV. Admisión de Miembros</h3>
+                <p><strong>Artículo 27. Solicitud de admisión.</strong> Toda persona que desee ingresar como Miembro Titular deberá presentar solicitud en el formato autorizado por el Club y cumplir con los requisitos que determine la Operadora o el Comité de Admisión.</p>
+                <p><strong>Artículo 28. Información requerida.</strong> La solicitud podrá incluir datos generales del solicitante y Adicionales, actas de matrimonio o nacimiento, fotografías, referencias, cartas de recomendación, certificado médico, entrevista, información familiar y cualquier documento que la Operadora considere pertinente.</p>
+                
+                <!-- AQUÍ PUEDES CONTINUAR PEGANDO LOS DEMÁS ARTÍCULOS SIGUIENDO EL MISMO PATRÓN -->
+                <!-- <p><strong>Artículo X. Nombre.</strong> Contenido...</p> -->
+                
+            </section>
+
+        </article>
+    </main>
+
+    <!-- Footer Corporativo -->
+    <footer class="modern-footer">
+        <div class="footer-socials" style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 1.5rem;">
+            <a href="https://www.instagram.com/miradorclub/" target="_blank" style="color: rgba(255,255,255,0.6); transition: all 0.3s;" aria-label="Instagram">
+                <svg width="26" height="26" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/miradorclubmx" target="_blank" style="color: rgba(255,255,255,0.6); transition: all 0.3s;" aria-label="Facebook">
+                <svg width="26" height="26" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg>
+            </a>
+        </div>
+        <p style="margin-bottom: 0.5rem;"><a href="aviso-privacidad.html" style="color: rgba(255,255,255,0.7); text-decoration: underline;">Aviso de Privacidad</a></p>
+        <p>© 2026 Mirador Club Deportivo. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
