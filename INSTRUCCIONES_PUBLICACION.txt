@@ -1,0 +1,29 @@
+MIRADOR CLUB — ARCHIVOS SEO + FORMULARIO PHP
+
+1. SUBIR AL HOSTING
+Sube index.html, tour.html, styles.css, script.js, tour.css, tour.js, contacto.php, robots.txt y sitemap.xml en la raíz pública (por ejemplo, public_html).
+IMPORTANTE: La carpeta assets/ NO se incluyó porque no fue proporcionada. Debes mantener la carpeta assets/ original con todas las fotografías, renders y logos, respetando los nombres.
+
+2. CAMBIAR EL DOMINIO ANTES DE PUBLICAR
+Sustituye https://TU-DOMINIO.COM por la URL HTTPS real del sitio en estos cuatro archivos:
+- index.html
+- tour.html
+- robots.txt
+- sitemap.xml
+Mantén una sola versión de dominio (con o sin www) y redirecciona la otra mediante la configuración del servidor.
+
+3. ENVÍO DE FORMULARIO
+El formulario envía mediante POST/AJAX a contacto.php. Destinatario configurado: aaroncortes.ac9@gmail.com.
+Se requiere hosting con PHP 7.4+ y correo saliente habilitado (mail()). En servidores que no permiten mail() hará falta SMTP autenticado mediante proveedor de correo; no puede probarse la entrega desde archivos locales.
+El remitente se crea como no-reply@dominio-del-hosting. Configura SPF, DKIM y DMARC en DNS según tu proveedor; se recomienda usar un buzón remitente autorizado o implementar SMTP para máxima entregabilidad.
+El formulario incluye validación del servidor, control básico de longitud y campo antispam. Para tráfico elevado se recomienda CAPTCHA/Turnstile y un control de frecuencia en el servidor.
+
+4. SEO
+Se incluyen robots.txt, sitemap.xml, canonical, etiquetas Open Graph, Twitter Card y JSON-LD; títulos y descripciones optimizados de la home y el recorrido.
+Después de publicar, revisa que https://TU-DOMINIO.COM/robots.txt y /sitemap.xml sean accesibles, agrega el dominio a Google Search Console y envía el sitemap.
+Para SEO local conviene incluir cuando se confirme la dirección exacta, perfil de Google Business, horario y teléfono comercial (no se inventaron).
+Los archivos robots.txt y sitemap.xml no garantizan indexación ni rankings por sí solos.
+
+5. PRUEBAS
+Visita la web desde https:// (no file://), completa el formulario y confirma la recepción en Gmail (también Spam). Si falla, revisa el error_log de PHP y que mail() funcione.
+El formulario responde solo con JSON y no debe abrir como una página para visitantes.

@@ -1,70 +1,70 @@
 <?php
-// Configuración de encabezados para seguridad
-header("Content-Type: text/plain; charset=UTF-8");
+declare(strict_types=1);
+// Mirador Club - formulario web. Requiere PHP 7.4+ y función mail() operativa.
+header('Content-Type: application/json; charset=utf-8');
+header('Cache-Control: no-store');
+header('X-Content-Type-Options: nosniff');
 
-// Validar que la petición sea POST
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    
-    // 1. Sanitización y validación de los datos
-    $nombre = strip_tags(trim($_POST["nombre"]));
-    $telefono = strip_tags(trim($_POST["telefono"]));
-    $correo = filter_var(trim($_POST["correo"]), FILTER_SANITIZE_EMAIL);
-    
-    // Si mandaron intereses, juntarlos separados por coma
-    $intereses = "";
-    if (isset($_POST["intereses"]) && is_array($_POST["intereses"])) {
-        $intereses = implode(", ", $_POST["intereses"]);
-    } else {
-        $intereses = "Ninguno especificado";
-    }
-
-    // 2. Verificar que los campos requeridos no estén vacíos
-    if (empty($nombre) || empty($telefono) || !filter_var($correo, FILTER_VALIDATE_EMAIL)) {
-        http_response_code(400);
-        echo "Por favor, completa los campos obligatorios correctamente.";
-        exit;
-    }
-
-    // 3. Configuración del Correo a enviar
-    $destinatario = "enzocortesdoherty@gmail.com";
-    $asunto = "Nuevo Contacto Web - Mirador Club: $nombre";
-
-    // Cuerpo del correo
-    $mensaje = "Has recibido un nuevo lead (contacto) desde la página de Mirador Club.
-
-";
-    $mensaje .= "------------------------------------------------------
-";
-    $mensaje .= "Nombre: $nombre
-";
-    $mensaje .= "Teléfono: $telefono
-";
-    $mensaje .= "Correo Electrónico: $correo
-";
-    $mensaje .= "Intereses seleccionados: $intereses
-";
-    $mensaje .= "------------------------------------------------------
-";
-
-    // Encabezados (Para que puedas contestarle directo dándole 'Responder')
-    $headers = "From: $nombre <$correo>
-";
-    $headers .= "Reply-To: $correo
-";
-    $headers .= "X-Mailer: PHP/" . phpversion();
-
-    // 4. Envío del Correo
-    if (mail($destinatario, $asunto, $mensaje, $headers)) {
-        http_response_code(200);
-        echo "¡Gracias! Tu mensaje ha sido enviado exitosamente.";
-    } else {
-        http_response_code(500);
-        echo "Lo sentimos, hubo un error técnico al enviar tu mensaje. Inténtalo más tarde.";
-    }
-
-} else {
-    // Si alguien intenta entrar a contacto.php directamente por URL
-    http_response_code(403);
-    echo "Hubo un problema con tu envío, por favor intenta de nuevo.";
+function respond(int $status, bool $success, string $message): void {
+    http_response_code($status);
+    echo json_encode(['ok' => $success, 'message' => $message], JSON_UNESCAPED_UNICODE);
+    exit;
 }
-?>
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    header('Allow: POST');
+    respond(405, false, 'Método no permitido.');
+}
+if ((int)($_SERVER['CONTENT_LENGTH'] ?? 0) > 12000) {
+    respond(413, false, 'La solicitud excede el tamaño permitido.');
+}
+if (!empty($_POST['website'])) {
+    // Campo invisible: respuesta positiva sin enviar correo para evitar reintentos del bot.
+    respond(200, true, 'Solicitud recibida.');
+}
+function field(string $key, int $maximum): string {
+    $value = $_POST[$key] ?? '';
+    if (!is_string($value)) respond(422, false, 'Datos inválidos.');
+    $value = trim(preg_replace('/[\x00-\x1F\x7F]+/u', ' ', $value) ?? '');
+    if (strlen($value) > $maximum) respond(422, false, 'Un campo es demasiado largo.');
+    return $value;
+}
+$name = field('name', 180);
+$email = field('email', 254);
+$phone = field('phone', 50);
+$interest = field('interest', 100);
+$allowed = ['Membresías', 'Pádel y espacios activos', 'Fases del proyecto', 'Información general'];
+if (strlen($name) < 2 || !filter_var($email, FILTER_VALIDATE_EMAIL) ||
+    !preg_match('/^[+0-9()\s.\-]{7,25}$/', $phone) || !in_array($interest, $allowed, true)) {
+    respond(422, false, 'Revisa tu nombre, correo, teléfono e interés.');
+}
+// Evita confiar en el correo del visitante como remitente: mejora la entregabilidad.
+$recipient = 'aaroncortes.ac9@gmail.com';
+$host = strtolower((string)($_SERVER['SERVER_NAME'] ?? ''));
+$host = preg_replace('/:\d+$/', '', $host);
+if (!preg_match('/^[a-z0-9][a-z0-9.-]*\.[a-z]{2,}$/', $host)) {
+    error_log('Mirador Club: configura un dominio válido en el hosting para el envío de correo.');
+    respond(503, false, 'El envío aún no está configurado. Intenta más tarde.');
+}
+$sender = 'no-reply@' . preg_replace('/^www\./', '', $host);
+$subject = 'Nuevo lead - Mirador Club';
+$body = "Nuevo contacto desde Mirador Club\n\n"
+      . "Nombre: {$name}\nCorreo: {$email}\nTeléfono: {$phone}\n"
+      . "Interés: {$interest}\nFecha (UTC): " . gmdate('Y-m-d H:i:s') . "\n";
+$headers = [
+    'From' => 'Mirador Club <' . $sender . '>',
+    'Reply-To' => $email,
+    'Content-Type' => 'text/plain; charset=UTF-8',
+    'MIME-Version' => '1.0',
+    'X-Mailer' => 'MiradorClubContact/1.0'
+];
+try {
+    $sent = mail($recipient, $subject, $body, $headers);
+} catch (Throwable $error) {
+    error_log('Mirador Club mail error: ' . $error->getMessage());
+    $sent = false;
+}
+if (!$sent) {
+    error_log('Mirador Club: mail() falló; revisar correo saliente del hosting.');
+    respond(503, false, 'No fue posible enviar la solicitud. Intenta nuevamente más tarde.');
+}
+respond(200, true, 'Solicitud enviada correctamente.');
